@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0c0d" />
+    <meta name="description" content="LFG — Looking For Group: найди тиммейтов в ДГТУ. Shake, заявки в команды, наборы на хакатоны и турниры." />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0d'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial,sans-serif' font-size='30' font-weight='900' text-anchor='middle' fill='%23f5f5f2'%3ELFG%3C/text%3E%3Ccircle cx='53' cy='47' r='4' fill='%23c8ff3d'/%3E%3C/svg%3E"
+    />
+    <!-- Telegram Mini App SDK лежит у нас (public/telegram-web-app.js), а не грузится с telegram.org:
+         синхронный скрипт с telegram.org блокировал страницу, и при медленном или недоступном telegram.org
+         Mini App висел чёрным экраном минуту-две. Обновить: scripts/update-telegram-sdk.ps1 -->
+    <script src="/lfg-dev-app/telegram-web-app.js"></script>
+    <!-- Заставка до загрузки бандла и данных главной: видна сразу (div#boot ниже).
+         Шрифты не preload-им: через медленный туннель они отнимали канал у JS (font-display: swap и так есть). -->
+    <style>
+      html, body { margin: 0; background: #0b0c0d; }
+      /* заставка: анимированный логотип (public/logo-anim.svg) поверх всего; React её не трогает,
+         Shell гасит, когда главная загрузила данные (src/lib/ready.ts), поэтому анимация идёт без рывков */
+      .boot { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; align-content: center; gap: 18px;
+        background: #0b0c0d radial-gradient(120% 60% at 50% 100%, rgba(200, 255, 61, 0.12), transparent 60%);
+        font: 600 13px/1.4 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #8a8f98; text-align: center; padding: 0 32px;
+        transition: opacity 0.35s ease; }
+      .boot img { width: min(80vw, 320px); height: auto; }
+      .boot.out { opacity: 0; pointer-events: none; }
+      .boot .slow { display: none; max-width: 260px; }
+      .boot.late .slow { display: block; }
+    </style>
+    <title>LFG</title>
+    <script type="module" crossorigin src="/lfg-dev-app/assets/index-DyOAUQCB.js"></script>
+    <link rel="stylesheet" crossorigin href="/lfg-dev-app/assets/index-yGu14Iq7.css">
+  </head>
+  <body>
+    <div id="boot" class="boot" role="status" aria-label="Загружаю">
+      <img src="/lfg-dev-app/logo-anim.svg" alt="LFG" width="320" height="220" />
+      <span class="slow">Долго грузится — интернет медленный или ссылка устарела. Закрой приложение и открой его заново из бота.</span>
+    </div>
+    <div id="root"></div>
+    <script>
+      // через 12 с, если заставка ещё висит, — подсказка переоткрыть
+      setTimeout(function () { var b = document.getElementById('boot'); if (b && b.className === 'boot') b.className = 'boot late'; }, 12000);
+    </script>
+  </body>
+</html>

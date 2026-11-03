@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220" role="img" aria-label="LFG">
+<defs>
+<path id="t" d="M85.9 77V133L76.7 122.8H120.9V143H65.4V77Z M135.7 102.8H179.1V121.7H135.7ZM180.7 77V95.9H136.8L146.1 85.8V143H125.7V77Z M248.5 114.5Q248.2 120.3 246.4 125.7Q244.5 131.1 240.9 135.4Q237.3 139.7 231.8 142.1Q226.2 144.6 218.6 144.6Q211.7 144.6 205.6 142.4Q199.4 140.2 194.7 135.8Q190 131.5 187.3 125Q184.6 118.5 184.6 110Q184.6 101.5 187.3 95Q190 88.5 194.8 84.2Q199.7 79.8 206 77.6Q212.4 75.4 219.7 75.4Q230 75.4 237.3 78.8Q244.7 82.2 249.1 88.1Q253.6 94 255 101.7H234.5Q233.8 99.3 231.7 97.5Q229.6 95.8 226.6 94.9Q223.6 94 219.9 94Q215.3 94 212 95.7Q208.6 97.4 206.8 100.9Q205.1 104.5 205.1 110Q205.1 115.6 207.1 119.3Q209.1 123 212.9 124.8Q216.6 126.5 221.8 126.5Q226.8 126.5 230.6 125.3Q234.5 124 236.9 121.3Q239.4 118.6 239.9 114.5ZM223 123.3V107.7H255.5V143H241.3L238.3 117.7L241.9 123.3Z"/>
+<clipPath id="ca"><circle cx="99.6" cy="110" r="64"><animate attributeName="cx" dur="3.2s" repeatCount="indefinite" values="99.6;127.6;127.6;99.6" keyTimes="0;0.25;0.75;1" calcMode="spline" keySplines="0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1"/></circle></clipPath>
+<clipPath id="cb"><circle cx="212.7" cy="110" r="64"><animate attributeName="cx" dur="3.2s" repeatCount="indefinite" values="212.7;177.0;177.0;212.7" keyTimes="0;0.25;0.75;1" calcMode="spline" keySplines="0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1"/></circle></clipPath>
+<radialGradient id="g" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#c8ff3d" stop-opacity="0.16"/><stop offset="1" stop-color="#c8ff3d" stop-opacity="0.04"/></radialGradient>
+</defs>
+<circle cx="99.6" cy="110" r="64" fill="none" stroke="#f5f5f2" stroke-opacity="0.22" stroke-width="1.2"><animate attributeName="cx" dur="3.2s" repeatCount="indefinite" values="99.6;127.6;127.6;99.6" keyTimes="0;0.25;0.75;1" calcMode="spline" keySplines="0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1"/></circle>
+<circle cx="212.7" cy="110" r="64" fill="url(#g)" stroke="#c8ff3d" stroke-opacity="0.7" stroke-width="1.4"><animate attributeName="cx" dur="3.2s" repeatCount="indefinite" values="212.7;177.0;177.0;212.7" keyTimes="0;0.25;0.75;1" calcMode="spline" keySplines="0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1"/></circle>
+<g fill="none" stroke="#c8ff3d" stroke-width="1">
+<circle cx="152.3" cy="110" r="64" opacity="0"><animate attributeName="r" dur="3.2s" repeatCount="indefinite" values="64;64;106;106" keyTimes="0;0.47;0.75;1"/><animate attributeName="opacity" dur="3.2s" repeatCount="indefinite" values="0;0.5;0;0" keyTimes="0;0.47;0.75;1"/></circle>
+<circle cx="152.3" cy="110" r="64" opacity="0"><animate attributeName="r" dur="3.2s" repeatCount="indefinite" values="64;64;106;106" keyTimes="0;0.55;0.85;1"/><animate attributeName="opacity" dur="3.2s" repeatCount="indefinite" values="0;0.35;0;0" keyTimes="0;0.55;0.85;1"/></circle>
+</g>
+<use href="#t" fill="#f5f5f2"/>
+<g clip-path="url(#cb)"><g clip-path="url(#ca)">
+<g opacity="0"><animate attributeName="opacity" dur="3.2s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.2;0.42;0.8;0.95;1"/>
+<rect width="320" height="220" fill="#c8ff3d"/>
+<use href="#t" fill="#0b0c0d"/>
+</g></g></g>
+</svg>
